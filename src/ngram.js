@@ -9,3 +9,4 @@ export const slidingWindow = R.curry((size, items) =>
 
 export const splitContextAndNext = (gram) => [R.init(gram), R.last(gram)];
 export const serializeContext = R.join('\u0000');
+export const buildNgrams = (order) => slidingWindow(order + 1);
