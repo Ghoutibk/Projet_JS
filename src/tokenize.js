@@ -1,10 +1,10 @@
 import * as R from 'ramda';
 
 export const normalizeText = R.pipe(
-  R.toLower,
+  (text) => text.toLowerCase(),
   R.replace(/[^\p{L}\s'-]/gu, ' '),
   R.replace(/\s+/g, ' '),
   R.trim,
 );
 
-export const toCharArray = R.split('');
+export const toCharArray = (text) => text.split('');
